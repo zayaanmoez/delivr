@@ -3,9 +3,9 @@
 Food ordering and delivery platform with dynamic content, authentication services, order tracking and account management. Developed with Javascript, Node, Express, Pug templating engine and MongoDB.
 
 ## Build project
-Install external modules: npm install
-Running the server form the assignment directory: npm start (or node server.js)
-The site is hosted at: http://localhost:3000
+- Install external modules: npm install
+- Running the server form the assignment directory: npm start (or node server.js)
+- The site is hosted at: http://localhost:3000
 
 Project Overview:
 server.js : express server for the site 
