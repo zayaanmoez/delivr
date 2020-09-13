@@ -1,4 +1,4 @@
-#DELIVR
+# DELIVR
 
 Food ordering and delivery platform with dynamic content, authentication services, order tracking and account management. Developed with Javascript, Node, Express, Pug templating engine and MongoDB.
 
