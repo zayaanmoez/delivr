@@ -1,0 +1,50 @@
+html
+    head
+        title User Profile
+        link(rel="stylesheet" type="text/css" href="style.css")
+    body
+        include ./template.pug
+        div#list
+            br
+            p Username : #{username}  
+            br
+            br
+            if ownProfile
+                |Privacy :   
+                input(type="radio" id="private" name="privacy" value="true" checked=session.privacy) 
+                label(for="private")  private    
+                input(type="radio" id="public" name="privacy" value="false" checked=!session.privacy) 
+                label(for="public")  public         
+                button#privy(onclick="setPrivacy()") Update
+                br
+                br
+            p Order History
+            br
+            br
+            each order in orders
+                a(href = `/orders/${order._id}`) #{order._id}    
+                |           #{order.restaurantName}
+                br
+                br
+            script#script(type='text/javascript' username=username).
+                function setPrivacy() {
+                    let val = document.getElementsByName("privacy");
+                    let ret;
+                    if(val[0].checked && val[0].value == "true") {
+                        ret = true;
+                    } else {
+                        ret = false;
+                    }
+                            
+                    let req = new XMLHttpRequest();
+                    req.onreadystatechange = function() {
+                        if(this.readyState == 4 && this.status == 200) {
+                            alert("Profile privacy updated!");
+                            window.location.replace("/");
+                        }
+                    }
+
+                    req.open("POST", "/setPrivacy");
+                    req.setRequestHeader("Content-Type", "application/json")
+                    req.send(JSON.stringify({username: document.getElementById("script").getAttribute("username"), privacy: ret}));
+                }

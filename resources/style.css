@@ -1,0 +1,355 @@
+html {
+    scroll-behavior: smooth;
+}  
+
+#title {
+    background-color: rgba(0, 0, 0, 0.932);
+    background-position: 0%;
+    color: white;
+    text-indent: 20%;
+    font-size: 10vmin;
+    z-index: 10;
+    position: relative;
+    margin-top: 3%;
+    height: 15vmin;
+    font-family: Arial Black;
+}
+
+#header {
+    background-color: rgba(0, 0, 0, 0.932);
+    background-position: 0%;
+    color: white;
+    font-size: 4vmin;
+    z-index: 10;
+    position: relative;
+    padding: 1vmin;
+    margin-top: 1%;
+    text-indent: 20%;
+    height: 8vmin;
+    font-family: Arial;
+}
+
+#welcome {
+    background-color: rgba(0, 0, 0, 0.932);
+    background-position: 0%;
+    color: white;
+    font-size: 7.5vmin;
+    z-index: 10;
+    position: relative;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 5vmin;
+    text-align:center;
+    height: 27%;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 100px;
+}
+
+#mainContent {
+    margin-bottom: 5%;
+}
+
+select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -moz-padding-start: 2px;
+    background-color: rgba(0, 0, 0, 0.932);
+    background-position: center right;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 255, 255);
+    font-size: 5vmin;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 13px 45px 15px 0px;
+    width: 50%;
+    height: 10%;
+    text-indent:5%;
+}
+
+#dropdown {
+    position: relative;
+    margin-top: 5%;
+    left: 25%;
+}
+
+#delivery {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 100%;
+    height: auto;
+    max-width: 40vw
+}
+
+#restaurant {
+    position: relative;
+    height: auto;
+    width: auto;
+    align-self: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#info {
+    background-color:  rgba(0, 0, 0, 0.932);
+    position: relative;
+    left: 26%;
+    width: 40%;
+    margin-top: 3%;
+    padding: 1% 2%;
+    font-size: larger;
+    border-radius: 50px;
+}
+
+#categories {
+    background-color:  rgba(0, 0, 0, 0.932);
+    position: relative;
+    width: 15%;
+    left: 2%;
+    margin-top: 4%;
+    padding: 1% 1% 10%;
+    font-size: larger;
+    border-radius: 50px;
+    float: left;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+#categories li {
+    padding: 5%;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+
+#menu {
+    position: relative;
+    width: 50%;
+    left: 6%;
+    margin-top: 3%;
+    float: left;
+}
+
+#order {
+    background-color:  rgba(0, 0, 0, 0.932);
+    position: relative;
+    width: 17%;
+    left: 10%;
+    margin-top: 4%;
+    padding: 1% 2%;
+    font-size: large;
+    border-radius: 50px;
+    float: left;
+}
+
+.category {
+    background-color:  rgba(0, 0, 0, 0.932);
+    position: relative;
+    margin-bottom: 3%;
+    font-size: large;
+    border-radius: 50px;
+}
+
+.addIcon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;  
+    background-image: url("add.png");
+    background-position: 0 0; 
+}
+
+.removeIcon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;  
+    background-image: url("remove.png");
+    background-position: 0 0; 
+}
+
+#menu ul {
+    padding: 3%;
+    text-align: left;
+}
+
+#stats {
+    background-color:  rgba(0, 0, 0, 0.932);
+    position: relative;
+    left: 15%;
+    width: 70%;
+    margin-top: 3%;
+    padding: 1% 2%;
+    border-radius: 50px;
+    padding: 5% 1%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#stats table {
+    color: white;
+    text-align: center;
+    font-size: 5vmin;
+    margin: 0 auto;
+}
+
+#stats th, td {
+    padding: 2% 2%;
+}
+
+#list {
+    background-color:  rgba(0, 0, 0, 0.932);
+    position: relative;
+    left: 15%;
+    width: 60%;
+    right: 15%;
+    margin-top: 3%;
+    border-radius: 50px;
+    padding: 2% 5%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 5vmin;
+}
+
+#list input {
+    padding: 0.5% 1%;
+    font-size: 3vmin;
+    border-radius: 50px;
+}
+
+.change {
+    background-color:  rgba(0, 0, 0, 0.932);
+    position: relative;
+    left: 15%;
+    width: 70%;
+    margin-top: 3%;
+    border-radius: 50px;
+    padding: 2% 2%;
+    color: white;
+    font-size: 5vmin;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.button {
+    padding: 15px 32px;
+    font-size: 3vmin;
+    border-radius: 50px;
+}
+
+.change input {
+    padding: 0.5% 1%;
+    font-size: 3vmin;
+    border-radius: 50px;
+}
+
+#restaurant2 {
+    position: relative;
+    height: auto;
+    width: auto;
+    align-self: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+}
+
+#categories2 {
+    background-color:  rgba(0, 0, 0, 0.932);
+    position: relative;
+    width: 20%;
+    left: 2%;
+    margin-top: 4%;
+    padding: 2% 1% 10%;
+    font-size: larger;
+    border-radius: 50px;
+    float: left;
+
+}
+
+#categories2 li {
+    padding: 5%;
+}
+
+#menu2 {
+    position: relative;
+    width: 50%;
+    left: 6%;
+    margin-top: 3%;
+    float: left;
+}
+
+.category2 {
+    background-color:  rgba(0, 0, 0, 0.932);
+    position: relative;
+    margin-bottom: 3%;
+    font-size: large;
+    border-radius: 50px;
+    padding: 2% 2%;
+}
+
+#menu2 ul {
+    padding: 3%;
+    text-align: left;
+}
+
+#save {
+    background-color:  rgba(0, 0, 0, 0.932);
+    color: white;
+    padding: 15px 32px;
+    font-size: 3vmin;
+    border-radius: 50px;
+    margin-top: 3%;
+    margin-left: 15%;
+}
+
+#login {
+    background-color:  rgb(255, 255, 255);
+    color: #040000;
+    padding: 2vmin 2vmin;
+    font-size: 3vmin;
+    border-radius: 50px;
+    margin-left: 1vmin;
+    font-family: Arial;
+}
+
+.auth {
+    background-color:  rgba(0, 0, 0, 0.932);
+    position: relative;
+    left: 20%;
+    width: 70vmin;
+    margin-top: 3%;
+    border-radius: 50px;
+    padding: 12vmin 30vmin;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fffdfd;
+    font-size: 5vmin
+}
+
+.auth input {
+    padding: 0.5% 1%;
+    font-size: 3vmin;
+    border-radius: 50px;
+}
+
+#privy {
+    background-color:  rgb(255, 255, 255);
+    color: #040000;
+    padding: 2vmin 2vmin;
+    font-size: 3vmin;
+    border-radius: 50px;
+    margin-left: 1vmin;
+    font-family: Arial;
+}

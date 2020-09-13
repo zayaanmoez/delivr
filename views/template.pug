@@ -1,0 +1,33 @@
+div#padding
+div#title DELIVR
+img#delivery(src="delivery.jpeg")
+div#header
+    a(href="/") |   Home    
+    |
+    if session.loggedin      
+        a(href="/orderForm") |  Order   
+        |       
+    a(href="/restaurantStats") |    Restaurant Stats    
+    |
+    a(href="/restaurants") |  Browse Restaurants    
+    |
+    a(href="/addrestaurant") |  Add Restaurant    
+    |
+    a(href="/users/") |  Users    
+    |
+    if session.loggedin
+        a(href="/users/" + session._id) |  Profile    
+        |
+    ||    
+    if !session.loggedin
+        a(href="/login")
+            button#login Login
+        |   
+        a(href="/register")
+            button#login Register
+    if session.loggedin
+        a(href="/logout")
+            button#login Logout
+
+         
+        

@@ -1,0 +1,17 @@
+html
+    head
+        title Authentication Page
+        link(rel="stylesheet" type="text/css" href="style.css")
+    body(onload="init()")
+        include ./template.pug
+        div.auth
+            |Username :    
+            input(type="textbox" name="username") 
+            br
+            br
+            |Password :    
+            input(type="textbox" name="password") 
+            br
+            br
+            button#login(name="auth") #{auth}
+        script#script(src="authenticate.js" auth=`${auth}`)

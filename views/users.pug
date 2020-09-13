@@ -1,0 +1,22 @@
+html
+    head
+        title User Directory
+        link(rel="stylesheet" type="text/css" href="style.css")
+    body
+        include ./template.pug
+        div#list
+            br
+            br
+            |Username :    
+            input#search(type="textbox" onchange="query()") 
+            br
+            br
+            each user in users
+                a(href = `/users/${user._id}`) #{user.username}
+                br
+                br
+            script(type='text/javascript').
+                function query() {
+                    let val = document.getElementById("search").value;
+                    window.location.replace("/users/?name=" + val)
+                }

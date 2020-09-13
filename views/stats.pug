@@ -1,0 +1,20 @@
+html
+    head
+        title Stats Page
+        link(rel="stylesheet" type="text/css" href="style.css")
+    body
+        include ./template.pug
+        div#stats
+            table
+                tr
+                    th Restaurant
+                    th # 0f Orders
+                    th Average Total
+                    th Popular Item
+                each restaurant in Object.keys(restaurantStats)
+                    tr
+                        td=restaurantStats[restaurant].name
+                        td=restaurantStats[restaurant].orderCount
+                        td=restaurantStats[restaurant].averageTotal
+                        td=restaurantStats[restaurant].popularItem
+                

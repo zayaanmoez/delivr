@@ -1,0 +1,13 @@
+html
+    head
+        title Browse Restaurant List
+        link(rel="stylesheet" type="text/css" href="style.css")
+    body
+        include ./template.pug
+        div#list
+            br
+            each id in Object.keys(restaurantList)
+                - let url = `/restaurants/${id}`
+                a(href=url) #{restaurantList[id].name}
+                br
+                br

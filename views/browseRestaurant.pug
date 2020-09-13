@@ -1,0 +1,55 @@
+html
+    head
+        title Browse Restaurant
+        link(rel="stylesheet" type="text/css" href="style.css")
+    body(onload="init()")
+        include ./template.pug
+        div#mainContent
+            div#info.change
+                p#infoName Name : #{restaurant.name}
+                br
+                p#infoDelivery Delivery Fee : $#{restaurant.delivery_fee}
+                br
+                p#infoOrder Minimum order : $#{restaurant.min_order}
+                br
+            div#updateInfo.change
+                |Name :    
+                input(type="textbox" name="name") 
+                br
+                br
+                |Delivery Fee :    
+                input(type="textbox" name="deliveryFee") 
+                br
+                br
+                |Minimum order :   
+                input(type="textbox" name="minOrder") 
+                br
+                br
+                button#update.button Update
+            div#addCategory.change
+                |Category :   
+                input(type="textbox" name="category") 
+                br
+                br
+                button#category.button Add
+            div#addItem.change
+                |Item :    
+                input(type="textbox" name="item") 
+                br
+                br
+                |Description :    
+                input(type="textbox" name="description") 
+                br
+                br
+                |Price :   
+                input(type="textbox" name="price") 
+                br
+                br
+                |Category :   
+                select#itemCategory
+                br
+                br
+                button#item.button Add
+            button#save Save
+        script#script(src="browseRestaurant.js" resID=`${restaurant.id}`)
+    

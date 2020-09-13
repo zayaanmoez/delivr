@@ -1,0 +1,21 @@
+html
+    head
+        title Add Restaurant
+        link(rel="stylesheet" type="text/css" href="style.css")
+    body(onload="init()")
+        include ./template.pug
+        div#add.change
+            |Name :    
+            input(type="textbox" name="name") 
+            br
+            br
+            |Delivery Fee :    
+            input(type="textbox" name="deliveryFee") 
+            br
+            br
+            |Minimum order :   
+            input(type="textbox" name="minOrder") 
+            br
+            br
+            button#create.button Create
+            script(src="addRestaurant.js")

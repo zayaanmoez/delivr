@@ -1,0 +1,32 @@
+html
+    head
+        title Order Page
+        link(rel="stylesheet" type="text/css" href="style.css")
+    body
+        include ./template.pug
+        div#list
+            br
+            | Username : #{orderData.username}  
+            br
+            br
+            | Restaurant Name : #{orderData.restaurantName}
+            br
+            br
+            br
+            each item in orderData.order
+                |   #{item.name}    x   #{item.count}
+                br
+            br
+            br
+            | Subtotal : $#{orderData.subtotal}
+            br
+            br
+            | Tax : $#{orderData.tax}
+            br
+            br
+            | Delivery Fee : $#{orderData.fee}
+            br
+            br
+            | Total : $#{orderData.total}
+            br
+            br
